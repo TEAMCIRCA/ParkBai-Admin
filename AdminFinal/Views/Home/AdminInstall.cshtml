@@ -1,0 +1,160 @@
+﻿
+@{
+    ViewBag.Title = "AdminInstall";
+    Layout = "~/Views/Shared/SideNav.cshtml";
+}
+
+<html>
+<head>
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script type="module" src="~/Scripts/myScripts/AdminInstall.js"></script>
+    <style>
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .con1 {
+            width: 500px;
+            height: 600px;
+            border-radius: 26px;
+            background: #003459;
+            box-shadow: inset 20px 20px 12px #00243d, inset -20px -20px 12px #004475;
+            box-sizing: border-box;
+            padding: 30px;
+            margin: 50px;
+        }
+
+        .con2 {
+            width: 500px;
+            height: 350px;
+            border-radius: 26px;
+            background: #003459;
+            box-shadow: inset 20px 20px 12px #00243d, inset -20px -20px 12px #004475;
+            box-sizing: border-box;
+            padding: 20px;
+            margin: 70px 0px 50px -50px;
+        }
+
+        .image {
+            width: 70%;
+            margin: 20px 120px 0px 0px;
+        }
+
+        .datalbl {
+            display: inline-block;
+            width: 300px;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .databox {
+            width: 100px;
+            pointer-events: none;
+            background-color: #003459;
+            color: #e2c946;
+            border: none;
+            font-family: Raleway;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: right;
+        }
+
+        .databox2 {
+            width: 100px;
+            background-color: #003459;
+            color: #e2c946;
+            font-family: Raleway;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 5px;
+            border: solid 2px #00243d;
+            
+        }
+
+        .databtn {
+            width: 150px;
+            text-align: center;
+            border-radius: 5px;
+            background: linear-gradient(145deg, #00385f, #002f50);
+            box-shadow: 5px 5px 4px #001d31, -5px -5px 4px #004b81;
+            border: none;
+            height: 40px;
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+            .databtn:hover {
+                color: #e2c946;
+                box-shadow: inset 5px 5px 2px #00253f, inset -5px -5px 2px #004373;
+            }
+    </style>
+</head>
+<body>
+    <div class="sidebarfloat"></div>
+    <div class="leftdiv">
+
+
+        <div class="con1">
+            <h3>OWNER INSTALLATION</h3>
+            <br /><br />
+            <label class="datalbl">Parking Slot Sensor: </label>
+            <input type="text" id="priceSensor" value="" class="databox" /><br />
+            <label class="datalbl">RFID Scanner: </label>
+            <input type="text" id="priceScanner" value="" class="databox" /><br />
+            <label class="datalbl">Installation Fee: </label>
+            <input type="text" id="priceFee" value="" class="databox" /><br />
+            <br /><br />
+
+            <label class="datalbl">Number of Sensor/s: </label>
+            <input type="number" id="numsensors" value="" class="databox2" required /><br /><br />
+            <label class="datalbl">Number of Scanner/s: </label>
+            <input type="number" id="numscanner" value="" class="databox2" required /><br /><br />
+            <button class="databtn" id="btnCalculate">Calculate</button>
+            <br /><br />
+
+            <label class="datalbl">PAYMENT:</label><br />
+            <select id="ownerDropdown"></select><br />
+
+            <label class="datalbl">Parking Sensor/s: </label>
+            <input type="text" id="totalSensors" value="" class="databox" /><br />
+            <label class="datalbl">RFID Scanner/s: </label>
+            <input type="text" id="totalScanner" value="" class="databox" /><br />
+            <label class="datalbl">Installation Fee: </label>
+            <input type="text" id="totalFee" value="" class="databox" /><br />
+            <label class="datalbl">TOTAL PAYMENT: </label>
+            <input type="text" id="totalPayment" value="" class="databox" /><br />
+            <br /><br />
+            <button class="databtn" id="btnPricing">PROCEED</button>
+        </div>
+
+
+
+    </div>
+
+    <div class="rightdiv">
+        <center>
+            <input type="image" class="image" id="ParkBaiIcon" title="ParkBai Icon" src="" loading="lazy" /><br />
+        </center>
+        <div class="con2">
+            <h3>PARKBAI PERCENTAGE</h3>
+            <p>This is the percentage of the company's share every parking.</p>
+            <br /><br />
+
+            <label class="datalbl">CURRENT PARKING PERCENTAGE: </label>
+            <input type="text" id="current_percent" value="" class="databox" /><br /><br />
+            <label class="datalbl">NEW PARKING PERCENTAGE: </label>
+            <input type="number" id="new_percent" value="" class="databox2" /><br /><br />
+            <br />
+            <button class="databtn" id="btnPercent">Submit</button>
+        </div>
+
+
+    </div>
+</body>
+</html>
+
